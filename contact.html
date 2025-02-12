@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Contact GitHub Profile README Generator - Get in touch with us">
+    <meta name="keywords" content="contact, GitHub Profile, README Generator, support">
+    <meta name="author" content="ReadMaker Pro">
+    <title>Contact Us - GitHub Profile README Generator</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: "Inter", sans-serif;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #ffb8b8 0%, #f6fff9 50%, #e4ffcb 100%);
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glass-morphism {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        .input-style {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .input-style:focus {
+            border-color: rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            outline: none;
+        }
+
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Your header code goes here -->
+
+
+
+    <!-- Navigation -->
+    <nav style="background: linear-gradient(135deg, #ffb8b8 0%, #f6fff9 50%, #e4ffcb 100%);" class="fixed w-full z-50 glass-morphism">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div  style="color: black;" class="flex items-center justify-between h-16">
+          <a
+            href="/"
+            class="flex items-center space-x-2 text-2xl font-bold bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent"
+          >
+          <div class="logo-container flex items-center space-x-3 px-4 py-2 rounded-lg transition-all duration-300 hover:transform hover:scale-105"
+          >
+       <!-- GitHub Icon -->
+       <div class="relative">
+         <i class="fab fa-github text-2xl sm:text-3xl" style="color: #333333;"></i>
+         <!-- Decorative spark effect -->
+         <span class="absolute -top-1 -right-1 flex h-3 w-3">
+           <span class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75"
+                 style="background: #1DB954;"></span>
+           <span class="relative inline-flex rounded-full h-3 w-3"
+                 style="background: #1DB954;"></span>
+         </span>
+       </div>
+     
+       <!-- Divider -->
+       <span class="h-6 w-px" style="background: rgba(0, 0, 0, 0.1);"></span>
+     
+       <!-- Name -->
+       <div class="flex flex-col">
+         <span class="text-lg sm:text-xl font-bold" style="color: #333333;">
+           ReadMaker Pro
+           
+         </span>
+        
+       </div>
+     </div>
+     
+     
+          </a>
+          <div class="hidden md:flex space-x-8">
+            <a  style="color: black;"
+              href="index.html"
+              class="text-gray-300 hover:text-indigo-500 transition-colors duration-300"
+              >Home</a
+            >
+            <a  style="color: black;"
+              href="about.html"
+              class="text-gray-300 hover:text-indigo-500 transition-colors duration-300"
+              >About</a
+            >
+            <a  style="color: black;"
+              href="contact.html"
+              class="text-gray-300 hover:text-indigo-500 transition-colors duration-300"
+              >Contact US</a
+            >
+            <a  style="color: black;"
+              href="dmca.html"
+              class="text-gray-300 hover:text-indigo-500 transition-colors duration-300"
+              >DMCA</a
+            >
+          </div>
+          <div class="flex items-center space-x-4">
+            <div class="hidden md:block">
+              <button class="px-6 py-2 rounded-full transition-all duration-300 relative overflow-hidden"
+              style="background: linear-gradient(135deg, #bebebe 0%, #f6fff9 50%, #dedede 100%);
+                     border: 1px solid rgba(0, 0, 0, 0.1);
+                     color: #333333;
+                     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+        <span class="relative z-10 font-semibold">Get Started</span>
+      </button>
+            </div>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+              <button id="mobile-menu-button" class="p-2 rounded-md text-gray-400 hover:text-white hover:bg-dark-700 focus:outline-none">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- Mobile Menu (Moved outside nav) -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-[100] bg-gray-900/95 backdrop-blur-sm md:hidden">
+      <div class="flex flex-col min-h-screen">
+        <div class="flex justify-end p-4">
+          <button id="close-mobile-menu" class="text-gray-400 hover:text-white">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex flex-col items-center justify-center flex-grow space-y-8 p-8">
+          <a href="index.html" class="text-gray-300 hover:text-indigo-500 transition-colors duration-300 text-lg">Home</a>
+          <a href="about.html" class="text-gray-300 hover:text-indigo-500 transition-colors duration-300 text-lg">About</a>
+          <a href="contact.html" class="text-gray-300 hover:text-indigo-500 transition-colors duration-300 text-lg">Contact US</a>
+          <a href="dmca" class="text-gray-300 hover:text-indigo-500 transition-colors duration-300 text-lg">DMCA</a>
+          <button class="px-6 py-2 rounded-full transition-all duration-300 relative overflow-hidden"
+            style="background: linear-gradient(135deg, #bebebe 0%, #f6fff9 50%, #dedede 100%);
+                   border: 1px solid rgba(0, 0, 0, 0.1);
+                   color: #333333;
+                   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+      <span class="relative z-10 font-semibold">Get Started</span>
+    </button>
+        </div>
+      </div>
+    </div>
+    
+    <style>
+        
+    
+        /* Mobile Menu Styles */
+    #mobile-menu {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      position: fixed;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    
+    #mobile-menu.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    /* Prevent scrolling when mobile menu is open */
+    body.menu-open {
+      overflow: hidden;
+    
+      position: fixed;
+      width: 100%;
+    }
+    
+    </style>
+        
+        <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+    
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        }
+    
+        mobileMenuButton.addEventListener('click', toggleMobileMenu);
+        closeMobileMenuButton.addEventListener('click', toggleMobileMenu);
+    
+        // Close menu when clicking on links
+        Array.from(mobileMenuLinks).forEach(link => {
+            link.addEventListener('click', toggleMobileMenu);
+        });
+    });
+        </script><br><br>
+
+<!-- Main Content -->
+<div class="gradient-bg pt-24 pb-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Header -->
+        <div class="text-center mb-16">
+            <div class="floating inline-block mb-4 px-4 py-1 rounded-full glass-morphism">
+                <span style="color: #333333">Get in Touch</span>
+            </div>
+            <h1 class="text-4xl sm:text-5xl font-bold mb-8" style="color: #333333">
+                Contact Us
+            </h1>
+            <p class="text-xl" style="color: #4a5568">
+                Have questions? We'd love to hear from you.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12">
+            <!-- Contact Form -->
+            <div class="glass-morphism p-8 rounded-2xl reveal">
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block mb-2 font-medium" style="color: #333333">
+                            Your Name
+                        </label>
+                        <input type="text" id="name" 
+                               class="w-full px-4 py-3 rounded-xl input-style"
+                               placeholder="John Doe"
+                               required />
+                    </div>
+                    <div>
+                        <label for="email" class="block mb-2 font-medium" style="color: #333333">
+                            Email Address
+                        </label>
+                        <input type="email" id="email" 
+                               class="w-full px-4 py-3 rounded-xl input-style"
+                               placeholder="john@example.com"
+                               required />
+                    </div>
+                    <div>
+                        <label for="subject" class="block mb-2 font-medium" style="color: #333333">
+                            Subject
+                        </label>
+                        <input type="text" id="subject" 
+                               class="w-full px-4 py-3 rounded-xl input-style"
+                               placeholder="How can we help?"
+                               required />
+                    </div>
+                    <div>
+                        <label for="message" class="block mb-2 font-medium" style="color: #333333">
+                            Message
+                        </label>
+                        <textarea id="message" rows="5" 
+                                  class="w-full px-4 py-3 rounded-xl input-style"
+                                  placeholder="Your message here..."
+                                  required></textarea>
+                    </div>
+                    <button type="submit" 
+                            class="w-full px-8 py-3 rounded-xl transition-all duration-300"
+                            style="background: linear-gradient(135deg, #bebebe 0%, #f6fff9 50%, #dedede 100%);
+                                   color: #333333;
+                                   border: 1px solid rgba(0, 0, 0, 0.1);
+                                   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="space-y-8">
+                <!-- Quick Contact -->
+                <div class="glass-morphism p-8 rounded-2xl reveal">
+                    <h3 class="text-2xl font-bold mb-6" style="color: #333333">Quick Contact</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 rounded-full flex items-center justify-center"
+                                 style="background: rgba(0, 0, 0, 0.05)">
+                                <i class="fas fa-envelope" style="color: #333333"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium" style="color: #333333">Email</h4>
+                                <p style="color: #4a5568">support@readmaker.pro</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 rounded-full flex items-center justify-center"
+                                 style="background: rgba(0, 0, 0, 0.05)">
+                                <i class="fas fa-clock" style="color: #333333"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium" style="color: #333333">Response Time</h4>
+                                <p style="color: #4a5568">Within 24 hours</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Links -->
+                <div class="glass-morphism p-8 rounded-2xl reveal">
+                    <h3 class="text-2xl font-bold mb-6" style="color: #333333">Connect With Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="social-icon w-12 h-12 rounded-full flex items-center justify-center"
+                           style="background: rgba(0, 0, 0, 0.05)">
+                            <i class="fab fa-github text-xl" style="color: #333333"></i>
+                        </a>
+                        <a href="#" class="social-icon w-12 h-12 rounded-full flex items-center justify-center"
+                           style="background: rgba(0, 0, 0, 0.05)">
+                            <i class="fab fa-twitter text-xl" style="color: #333333"></i>
+                        </a>
+                        <a href="#" class="social-icon w-12 h-12 rounded-full flex items-center justify-center"
+                           style="background: rgba(0, 0, 0, 0.05)">
+                            <i class="fab fa-discord text-xl" style="color: #333333"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- FAQ Link -->
+                <div class="glass-morphism p-8 rounded-2xl reveal">
+                    <h3 class="text-2xl font-bold mb-4" style="color: #333333">Have Questions?</h3>
+                    <p class="mb-4" style="color: #4a5568">Check our frequently asked questions first.</p>
+                    <a href="#" 
+                       class="inline-flex items-center space-x-2 text-base font-medium"
+                       style="color: #333333">
+                        <span>Visit FAQ</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+</div>
+
+<!-- Your footer code goes here -->
+
+ <!-- Footer Section -->
+ <footer style="background: linear-gradient(135deg, #bebebe 0%, #f6fff9 50%, #dedede 100%); padding-top: 5rem; padding-bottom: 2.5rem;">
+  <!-- Footer Top Section - Newsletter -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="rounded-2xl p-8 mb-16 relative overflow-hidden"
+         style="background: rgba(255, 255, 255, 0.7); box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);">
+      <!-- Background Animation -->
+      <div class="absolute inset-0 animate-pulse"
+           style="background: linear-gradient(to right, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.02));">
+      </div>
+
+      <div class="relative grid gap-8 items-center p-4 sm:p-8">
+        <div>
+          <h3 class="text-2xl font-bold mb-4" style="color: #333333">
+            Stay Updated with GitHub Profile README Generator
+          </h3>
+          <p style="color: #4a5568">
+            Get the latest updates about new features and templates for your GitHub profile
+          </p>
+        </div>
+        <div>
+          <form class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-2">
+            <input type="email" placeholder="Enter your email"
+                   class="flex-1 px-4 py-3 rounded-xl transition-all duration-300"
+                   style="background: rgba(255, 255, 255, 0.9); border: 1px solid rgba(0, 0, 0, 0.1); color: #333333" />
+            <button class="px-6 py-3 rounded-xl transition-all duration-300 flex items-center justify-center space-x-2"
+                    style="background: #333333; color: white; hover:background: #000000">
+              <span>Subscribe</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Footer Content -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+      <!-- Company Info -->
+      <div class="space-y-6">
+        <div>
+          <a href="/" class="flex items-center space-x-2">
+            <i class="fab fa-github text-3xl" style="color: #333333"></i>
+            <span class="text-2xl font-bold" style="color: #333333">
+              README Gen
+            </span>
+          </a>
+        </div>
+        <p style="color: #4a5568">
+          Professional GitHub Profile README Generator with over 1 million satisfied developers worldwide.
+        </p>
+        <div class="flex space-x-4">
+          <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300"
+             style="background: rgba(0, 0, 0, 0.05); hover:background: rgba(0, 0, 0, 0.1)">
+            <i class="fab fa-twitter" style="color: #4a5568"></i>
+          </a>
+          <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300"
+             style="background: rgba(0, 0, 0, 0.05); hover:background: rgba(0, 0, 0, 0.1)">
+            <i class="fab fa-github" style="color: #4a5568"></i>
+          </a>
+          <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300"
+             style="background: rgba(0, 0, 0, 0.05); hover:background: rgba(0, 0, 0, 0.1)">
+            <i class="fab fa-discord" style="color: #4a5568"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-lg font-semibold mb-6" style="color: #333333">Quick Links</h4>
+        <ul class="space-y-3">
+          <li>
+            <a href="/" class="flex items-center space-x-2 transition-colors duration-300" style="color: #4a5568">
+              <i class="fas fa-chevron-right text-xs"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="#features" class="flex items-center space-x-2 transition-colors duration-300" style="color: #4a5568">
+              <i class="fas fa-chevron-right text-xs"></i>
+              <span>Features</span>
+            </a>
+          </li>
+          <li>
+            <a href="#templates" class="flex items-center space-x-2 transition-colors duration-300" style="color: #4a5568">
+              <i class="fas fa-chevron-right text-xs"></i>
+              <span>Templates</span>
+            </a>
+          </li>
+          <li>
+            <a href="#faq" class="flex items-center space-x-2 transition-colors duration-300" style="color: #4a5568">
+              <i class="fas fa-chevron-right text-xs"></i>
+              <span>FAQ</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Other Tools -->
+      <div>
+        <h4 class="text-lg font-semibold mb-6" style="color: #333333">Other Tools</h4>
+        <ul class="space-y-3">
+          <li>
+            <a href="#" class="flex items-center space-x-2 transition-colors duration-300" style="color: #4a5568">
+              <i class="fas fa-code text-xs"></i>
+              <span>Badge Generator</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center space-x-2 transition-colors duration-300" style="color: #4a5568">
+              <i class="fas fa-chart-bar text-xs"></i>
+              <span>Stats Generator</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center space-x-2 transition-colors duration-300" style="color: #4a5568">
+              <i class="fas fa-palette text-xs"></i>
+              <span>Theme Creator</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <h4 class="text-lg font-semibold mb-6" style="color: #333333">Status</h4>
+        <ul class="space-y-4">
+          <li class="flex items-start space-x-3">
+            <i class="fas fa-clock mt-1" style="color: #4a5568"></i>
+            <span style="color: #4a5568">Last Updated: 2025-02-12 18:42:45</span>
+          </li>
+          <li class="flex items-start space-x-3">
+            <i class="fas fa-user mt-1" style="color: #4a5568"></i>
+            <span style="color: #4a5568">User: Aniibhai908098</span>
+          </li>
+          <li>
+            <div class="flex items-center space-x-2 mt-4">
+              <span class="px-3 py-1 rounded-full text-sm" 
+                    style="background: rgba(34, 197, 94, 0.1); color: #15803d">
+                <i class="fas fa-check-circle mr-1"></i>
+                System Online
+              </span>
+              <span class="px-3 py-1 rounded-full text-sm"
+                    style="background: rgba(59, 130, 246, 0.1); color: #1d4ed8">
+                <i class="fas fa-server mr-1"></i>
+                API Active
+              </span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="pt-8" style="border-top: 1px solid rgba(0, 0, 0, 0.1)">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <!-- Copyright -->
+        <div style="color: #4a5568" class="text-sm">
+          <p>© 2025 GitHub Profile README Generator. All rights reserved.</p>
+        </div>
+
+        <!-- Legal Links -->
+        <div class="flex flex-wrap gap-4 md:justify-end text-sm">
+          <a href="#" class="transition-colors duration-300" style="color: #4a5568">Terms</a>
+          <a href="#" class="transition-colors duration-300" style="color: #4a5568">Privacy</a>
+          <a href="#" class="transition-colors duration-300" style="color: #4a5568">Contact</a>
+        </div>
+      </div>
+
+      <!-- Disclaimer -->
+      <div class="mt-6 text-xs text-center" style="color: #666666">
+        This website is not affiliated with GitHub. GitHub® is a trademark of GitHub, Inc.
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+</style>
+
+<script>
+    // Reveal animations on scroll
+    function reveal() {
+        const reveals = document.querySelectorAll(".reveal");
+        reveals.forEach((element) => {
+            const windowHeight = window.innerHeight;
+            const elementTop = element.getBoundingClientRect().top;
+            if (elementTop < windowHeight - 100) {
+                element.classList.add("active");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", reveal);
+    document.addEventListener("DOMContentLoaded", reveal);
+</script>
+
+</body>
+</html>
